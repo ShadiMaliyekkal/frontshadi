@@ -1,5 +1,11 @@
-import "@/styles/globals.css";
+// pages/_app.js
+import "../styles/globals.css";
+import { ToastProvider } from "../components/ToastProvider";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <ToastProvider>
+      <Component {...pageProps} />
+    </ToastProvider>
+  );
 }
